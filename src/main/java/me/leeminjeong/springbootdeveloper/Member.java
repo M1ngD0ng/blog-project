@@ -6,16 +6,16 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
+@Entity // 이 객체를 JPA가 관리하는 엔티티로 지정함
 @Getter
-@Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED) // 기본 생성자
+@AllArgsConstructor
 public class Member {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본키를 자동으로 1씩 증가
     @Column(name = "id", updatable = false)
     private Long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false) // name이라는 not null 컬럼과 매핑
     private String name;
 }
