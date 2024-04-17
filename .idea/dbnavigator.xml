@@ -83,7 +83,7 @@ create table users (
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="awseb-e-ycwa2jirmq-stack-awsebrdsdatabase-bfw9axjhfe4o.cpcei26qo7da.ap-northeast-2.rds.amazonaws.com" />
-          <port value="3306" />
+          <port value="5000" />
           <database value="mysql" />
           <tns-folder value="" />
           <tns-profile value="" />
